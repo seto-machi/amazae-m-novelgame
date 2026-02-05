@@ -11,7 +11,35 @@ button {
     background-image: url(img/0827h.jpg);
     background-size: cover;
     height: 100vh;
+    transition: 3s;
 }
+
+.bg.black {
+    background-image: none;
+    background-color: black;
+}
+
+.bg.white {
+    background-image: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg.koucha {
+    background-image: url(img/koucha.webp);
+}
+
+.bg.poteto {
+    background-image: url(img/poteto.jpg);
+}
+
+.bg.beer {
+    background-image: url(img/beer.webp);
+}
+
 
 .pc {
     display: flex;
@@ -19,6 +47,10 @@ button {
     height: 100vh;
     justify-content: center;
     align-items: center;
+
+    figure {
+        margin: 0;
+    }
 }
 
 .txtbox {

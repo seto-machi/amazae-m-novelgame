@@ -1,0 +1,45 @@
+const txt = window.document.querySelector('.txt');
+txt.innerHTML = "誰に話しかけますか？";
+
+const btnbox = window.document.querySelector('.btnbox');
+btnbox.innerHTML = "<button><p>リッカ</p></button><button><p>ベルタ</p></button><button><p>小藍</p></button>";
+
+# ボタンを生成する。
+var btn = document.querySelectorAll('.btnbox button');
+console.log(btn);
+
+# ボタンのイベントを作成する。
+btn[0].addEventListener('click', function () {
+    # ボタンを押された後のテキストを作成。
+    txt.innerHTML = "いらっしゃいませ。何をご注文ですか？";
+
+    # ボタンの種類を定義する
+    botton_text = <button><p>紅茶を頼む</p></button>
+    botton_text += <button><p>ポテトを頼む</p></button>
+    botton_text += <button><p>ビールを頼む</p></button>
+
+    # リッカのボタンを作成する。
+    btnbox.classList.add("rikka");
+    btnbox.innerHTML = botton_text
+    const rikka = document.querySelectorAll('.rikka button');
+
+    # ベルタとシャオランのボタンを空白(ない状態にする)
+    const thumb_berta = window.document.querySelector('.berta');
+    const thumb_xiaolan = window.document.querySelector('.xiaolan');
+    thumb_berta.innerHTML = "";
+    thumb_xiaolan.innerHTML = "";
+    
+    # リッカのボタンを押された時の処理を行う
+    rikka[0].addEventListener('click', function () {
+        txt.innerHTML = "紅茶ですね。しばしお待ちくださいませ";
+        btnbox.innerHTML = "";
+    });
+    rikka[1].addEventListener('click', function () {
+        txt.innerHTML = "ポテトですね。今から揚げますのでお時間がかかります。しばしお待ちくださいませ";
+        btnbox.innerHTML = "";
+    });
+    rikka[2].addEventListener('click', function () {
+        txt.innerHTML = "ビールですね。すぐにお持ちします";
+        btnbox.innerHTML = "";
+    });
+});
