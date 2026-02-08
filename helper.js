@@ -44,17 +44,6 @@ export function background_change(food_class) {
     bg.classList.add(food_class);
 }
 
-export function weit_five_minute(clazz, src, serif) {
-    setTimeout(() => {
-        background_transfar()
-        txt.innerHTML = "5分後";
-        setTimeout(() => {
-            bg.innerHTML = food_img(clazz, src, serif)
-            background_change(koucha_classname)
-        }, 3000);
-    }, 3000);
-}
-
 export function food_img(clazz, src, serif) {
     return `<div class="pc">
     <figure class="${clazz}"><img src="img/${src}" alt="" width="200"></figure>
