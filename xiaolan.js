@@ -1,13 +1,13 @@
-import { menu, xiaolan_classname, select_class, txt } from "./helper.js";
+import { menu, txt, thumb_berta, thumb_rikka } from "./helper.js";
 import { btnbox } from "./home.js"
 
 export function xiaolan_event() {
     txt.innerHTML = "・・・いらっしゃいませ";
+    const xiaolan_classname = "xiaolan";
     btnbox.classList.add(xiaolan_classname);
+
     menu();
     const xiaolan = document.querySelectorAll(`.${xiaolan_classname} button`);
-    const thumb_rikka = select_class('.rikka');
-    const thumb_berta = select_class('.berta');
     thumb_berta.innerHTML = "";
     thumb_rikka.innerHTML = "";
     xiaolan[0].addEventListener('click', function () {

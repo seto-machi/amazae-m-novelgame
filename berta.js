@@ -1,13 +1,13 @@
-import { menu, berta_classname, select_class, txt } from "./helper.js";
+import { menu, txt, thumb_rikka, thumb_xiaolan } from "./helper.js";
 import { btnbox } from "./home.js"
 
 export function berta_event() {
     txt.innerHTML = "こんにちは！何頼みますか？";
+    const berta_classname = "berta";
     btnbox.classList.add(berta_classname);
+
     menu();
     const berta = document.querySelectorAll(`.${berta_classname} button`);
-    const thumb_rikka = select_class('.rikka');
-    const thumb_xiaolan = select_class('.xiaolan');
     thumb_rikka.innerHTML = "";
     thumb_xiaolan.innerHTML = "";
     berta[0].addEventListener('click', function () {
