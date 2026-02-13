@@ -24,7 +24,6 @@ export const teaButtonHandler = (before_serif, clazz, chara, after_serif) => {
 
 }
 
-
 export const potatoButtonHandler = (before_serif, clazz, chara, after_serif) => {
     txt.innerHTML = before_serif;
     btnbox.innerHTML = "";
