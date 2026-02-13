@@ -13,15 +13,16 @@ export function rikka_event() {
 
     menu();
 
-    const rikka = select_class(`.${rikka_classname} button`);
+    const rikka = document.querySelectorAll(`.${rikka_classname} button`);
     const thumb_berta = select_class(".berta");
     const thumb_xiaolan = select_class(".xiaolan");
     thumb_berta.innerHTML = "";
     thumb_xiaolan.innerHTML = "";
 
-    const teaButton = rikka[0]
-    const potatoButton = rikka[1]
-    const beerButton = rikka[2]
+    const teaButton = rikka[0];
+    const potatoButton = rikka[1];
+    const beerButton = rikka[2];
+
 
     teaButton.addEventListener("click", teaButtonHandler);
     potatoButton.addEventListener("click", potatoButtonHandler);

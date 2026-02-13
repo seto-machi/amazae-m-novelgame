@@ -7,17 +7,19 @@ import {
     poteto_classname,
     rikka_serif,
     txt,
+    koucha_classname
 } from "./helper.js";
+import { btnbox } from "./home.js";
 
 export const teaButtonHandler = () => {
     txt.innerHTML = "紅茶ですね。しばしお待ちくださいませ";
     btnbox.innerHTML = "";
     setTimeout(() => {
-        background_transfar()
+        background_transfar();
         txt.innerHTML = "5分後";
         setTimeout(() => {
-            bg.innerHTML = food_img(clazz, src, serif)
-            background_change(koucha_classname)
+            bg.innerHTML = food_img('rikka', "rr.png", rikka_serif("紅茶"));
+            background_change(koucha_classname);
         }, 3000);
     }, 3000);
 
@@ -31,7 +33,7 @@ export const potatoButtonHandler = () => {
         background_transfar();
         txt.innerHTML = "15分後";
         setTimeout(() => {
-            bg.innerHTML = food_img(rikka, "rr.png", rikka_serif("ポテト"));
+            bg.innerHTML = food_img('rikka', "rr.png", rikka_serif("ポテト"));
             background_change(poteto_classname);
         }, 3000);
     }, 3000);
@@ -44,7 +46,7 @@ export const beerButtonHandler = () => {
         background_transfar();
         txt.innerHTML = "3分後";
         setTimeout(() => {
-            bg.innerHTML = food_img(rikka, "rr.png", rikka_serif("ビール"));
+            bg.innerHTML = food_img('rikka', "rr.png", rikka_serif("ビール"));
             background_change(beer_classname);
         }, 3000);
     }, 3000);
