@@ -5,6 +5,7 @@ img {
 a {
     margin: 25px 0;
     display: block;
+
 }
 
 body,
@@ -24,6 +25,8 @@ button {
     border: 1px solid #6D8346;
     border-radius: 30px;
     margin-right: 5px;
+    padding: 0 25px;
+
 }
 
 .bg {
@@ -32,6 +35,12 @@ button {
     height: 100vh;
     transition: 3s;
     background-position: center;
+
+    @media screen and (min-width:915px)and (max-width:1250px) {
+        background-size: 125%;
+        background-position: bottom center;
+
+    }
 }
 
 .bg.black {
@@ -46,6 +55,13 @@ button {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.bg.koucha,
+.bg.poteto,
+.bg.beer {
+    background-size: cover;
+    background-position: center;
 }
 
 .bg.koucha {
@@ -80,6 +96,16 @@ button {
             width: 33%;
         }
     }
+
+    figure.xiaolan {
+        img {
+            width: 255px;
+        }
+
+        @media screen and (max-width:768px) {
+            width: 42%;
+        }
+    }
 }
 
 .txtbox {
@@ -102,8 +128,4 @@ button {
 
 .txt {
     margin-top: 0;
-}
-
-button {
-    padding: 0 25px;
 }
