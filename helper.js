@@ -29,10 +29,12 @@ export function menu() {
 
 export const bg = select_class('.bg');
 
-export function background_transfar() {
+export function background_transfar(chara) {
     bg.classList.add("black");
-    const thumb_nail = window.document.querySelector('.rikka,.berta,.xiaolan');
+    const thumb_nail = select_class(`.${chara}`);
+    console.log(thumb_nail);
     thumb_nail.innerHTML = "";
+
 }
 
 export function background_change(food_class) {
@@ -46,12 +48,4 @@ export function food_img(clazz, src, serif) {
     <div class="txtbox"><p class="txt">${serif}</p>
     <div class="btnbox return"><button><a href="">最初から遊ぶ</a></button></div>
     </div>`;
-}
-
-export function berta_serif_after(menu_img) {
-    return `お待たせ！${menu_img}だよ！たくさん食べて飲んでいってね！`
-}
-
-export function xiaolan_serif_after(menu_img) {
-    return `おまちどうさま。${menu_img}でございます。いつもありがとね`
 }

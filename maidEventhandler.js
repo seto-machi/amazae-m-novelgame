@@ -14,7 +14,7 @@ export const teaButtonHandler = (before_serif, clazz, chara, after_serif) => {
     txt.innerHTML = before_serif;
     btnbox.innerHTML = "";
     setTimeout(() => {
-        background_transfar();
+        background_transfar(clazz);
         txt.innerHTML = "5分後";
         setTimeout(() => {
             bg.innerHTML = food_img(clazz, chara, after_serif);
@@ -28,7 +28,7 @@ export const potatoButtonHandler = (before_serif, clazz, chara, after_serif) => 
     txt.innerHTML = before_serif;
     btnbox.innerHTML = "";
     setTimeout(() => {
-        background_transfar();
+        background_transfar(clazz);
         txt.innerHTML = "15分後";
         setTimeout(() => {
             bg.innerHTML = food_img(clazz, chara, after_serif);
@@ -41,7 +41,7 @@ export const beerButtonHandler = (before_serif, clazz, chara, after_serif) => {
     txt.innerHTML = before_serif;
     btnbox.innerHTML = "";
     setTimeout(() => {
-        background_transfar();
+        background_transfar(clazz);
         txt.innerHTML = "3分後";
         setTimeout(() => {
             bg.innerHTML = food_img(clazz, chara, after_serif);
